@@ -524,9 +524,43 @@ export default function Home() {
             </Card>
           </div>
 
-          <div className="bg-muted rounded-md p-8 text-center">
-            <p className="text-muted-foreground mb-2">Map integration placeholder</p>
-            <p className="text-sm text-muted-foreground">Interactive map will be added here</p>
+          <div className="grid md:grid-cols-3 gap-4">
+            <div className="h-64 md:h-80 rounded-md overflow-hidden shadow-md" data-testid="map-jakarta">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.157076726033!2d106.8207584!3d-6.2087634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTInMzEuNSJTIDEwNsKwNDknMTUuMSJF!5e0!3m2!1sen!2sid!4v1732518000000!5m2!1sen!2sid"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Jakarta Office - Jl. Sudirman"
+              ></iframe>
+            </div>
+            <div className="h-64 md:h-80 rounded-md overflow-hidden shadow-md" data-testid="map-bandung">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.898517676516!2d107.6169478!3d-6.9174639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwNTUnMDIuOSJTIDEwN8KwMzcnMDQuOSJF!5e0!3m2!1sen!2sid!4v1732518000000!5m2!1sen!2sid"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Bandung Office - Jl. Asia Afrika"
+              ></iframe>
+            </div>
+            <div className="h-64 md:h-80 rounded-md overflow-hidden shadow-md" data-testid="map-surabaya">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.553917244925!2d112.7499133!3d-7.2574719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwMTUnMjYuOSJTIDExMsKwNDUnMDcuNSJF!5e0!3m2!1sen!2sid!4v1732518000000!5m2!1sen!2sid"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Surabaya Office - Jl. Tunjungan"
+              ></iframe>
+            </div>
           </div>
         </div>
       </section>
