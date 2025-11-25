@@ -27,6 +27,7 @@ import {
   Globe
 } from "lucide-react";
 import { useState } from "react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import logoImg from "@assets/IMG-20251125-WA0007_1764034087379.jpg";
 import streetFoodImg from "@assets/IMG-20251125-WA0005_1764033940096.jpg";
 import dashboardImg from "@assets/IMG-20251125-WA0001_1764033940133.jpg";
@@ -34,6 +35,13 @@ import teamImg from "@assets/IMG-20251125-WA0003_1764033940115.jpg";
 
 export default function Home() {
   const { toast } = useToast();
+  
+  const aboutAnimation = useScrollAnimation();
+  const servicesAnimation = useScrollAnimation();
+  const missionAnimation = useScrollAnimation();
+  const focusAnimation = useScrollAnimation();
+  const locationsAnimation = useScrollAnimation();
+  const contactAnimation = useScrollAnimation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -189,7 +197,10 @@ export default function Home() {
 
       {/* About Section */}
       <section id="about" className="py-20 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div 
+          ref={aboutAnimation.ref}
+          className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${aboutAnimation.isVisible ? 'animate-fade-in' : 'opacity-0'}`}
+        >
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6" data-testid="text-about-title">
@@ -216,7 +227,10 @@ export default function Home() {
 
       {/* What We Offer Section */}
       <section id="services" className="py-20 bg-card">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div 
+          ref={servicesAnimation.ref}
+          className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${servicesAnimation.isVisible ? 'animate-fade-in' : 'opacity-0'}`}
+        >
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4" data-testid="text-services-title">
               What We Offer
@@ -292,7 +306,10 @@ export default function Home() {
 
       {/* Our Mission Section */}
       <section id="mission" className="py-20 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div 
+          ref={missionAnimation.ref}
+          className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${missionAnimation.isVisible ? 'animate-slide-in-left' : 'opacity-0'}`}
+        >
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4" data-testid="text-mission-title">
               Our Mission
@@ -368,7 +385,10 @@ export default function Home() {
 
       {/* Market Focus Section */}
       <section id="focus" className="py-20 bg-card">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div 
+          ref={focusAnimation.ref}
+          className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${focusAnimation.isVisible ? 'animate-slide-in-right' : 'opacity-0'}`}
+        >
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4" data-testid="text-focus-title">
               Our Market Focus
@@ -444,7 +464,10 @@ export default function Home() {
 
       {/* Locations Section */}
       <section id="locations" className="py-20 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div 
+          ref={locationsAnimation.ref}
+          className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${locationsAnimation.isVisible ? 'animate-fade-in' : 'opacity-0'}`}
+        >
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4" data-testid="text-locations-title">
               Find Us
@@ -547,7 +570,10 @@ export default function Home() {
 
       {/* Contact & Newsletter Section */}
       <section id="contact" className="py-20 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div 
+          ref={contactAnimation.ref}
+          className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${contactAnimation.isVisible ? 'animate-fade-in' : 'opacity-0'}`}
+        >
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4" data-testid="text-contact-title">
               Get in Touch

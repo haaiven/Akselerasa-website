@@ -81,17 +81,19 @@ This architecture was chosen to enable rapid development with modern tooling whi
 **Database: PostgreSQL (via Neon)**
 - Serverless Postgres chosen for scalability and ease of deployment
 - Neon serverless driver (`@neondatabase/serverless`) for connection pooling
+- All contact form submissions persist to database
 
 **ORM: Drizzle ORM**
 - Type-safe database queries with TypeScript
-- Schema-first approach with migrations
+- Schema-first approach with direct schema push (no manual migrations)
 - Zod integration for runtime validation via `drizzle-zod`
 
-**Storage Abstraction Layer**
+**Storage Implementation**
 - `IStorage` interface defines data operations
-- `MemStorage` implementation for in-memory development/testing
-- Database implementation would follow same interface pattern
-- Enables easy switching between storage backends
+- `DatabaseStorage` implementation using Drizzle ORM with PostgreSQL
+- Environment validation ensures DATABASE_URL is configured
+- Error handling for failed insert operations
+- Results ordered by most recent first (descending submittedAt)
 
 **Database Schema**
 - `users` table: Basic user authentication structure (id, username, password)
@@ -115,6 +117,20 @@ This architecture was chosen to enable rapid development with modern tooling whi
 5. Storage layer persists to database
 6. Success/error response returned
 7. Toast notification shows user feedback
+
+## Recent Changes (November 25, 2025)
+
+### Database Migration
+- Migrated contact form submissions from in-memory storage to PostgreSQL
+- Updated `DatabaseStorage` class to replace `MemStorage`
+- Added DATABASE_URL validation and error handling
+- Contact submissions now persist across restarts
+
+### Pending Email Integration
+- Email notifications for contact form submissions deferred
+- User dismissed Resend integration setup
+- Can be implemented later with email service credentials
+- Note: Contact form currently stores submissions in database without email notifications
 
 ## External Dependencies
 
