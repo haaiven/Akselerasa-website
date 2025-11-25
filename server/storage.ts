@@ -2,12 +2,20 @@ import {
   type User, 
   type InsertUser,
   type ContactSubmission,
-  type InsertContactSubmission
+  type InsertContactSubmission,
+  users,
+  contactSubmissions
 } from "@shared/schema";
-import { randomUUID } from "crypto";
+import { neon } from "@neondatabase/serverless";
+import { drizzle } from "drizzle-orm/neon-http";
+import { eq, desc } from "drizzle-orm";
 
-// modify the interface with any CRUD methods
-// you might need
+if (!process.env.DATABASE_URL) {
+  throw new Error("DATABASE_URL environment variable is required");
+}
+
+const sql = neon(process.env.DATABASE_URL);
+const db = drizzle(sql);
 
 export interface IStorage {
   getUser(id: string): Promise<User | undefined>;
@@ -17,46 +25,33 @@ export interface IStorage {
   getAllContactSubmissions(): Promise<ContactSubmission[]>;
 }
 
-export class MemStorage implements IStorage {
-  private users: Map<string, User>;
-  private contactSubmissions: Map<string, ContactSubmission>;
-
-  constructor() {
-    this.users = new Map();
-    this.contactSubmissions = new Map();
-  }
-
+export class DatabaseStorage implements IStorage {
   async getUser(id: string): Promise<User | undefined> {
-    return this.users.get(id);
+    const result = await db.select().from(users).where(eq(users.id, id)).limit(1);
+    return result[0];
   }
 
   async getUserByUsername(username: string): Promise<User | undefined> {
-    return Array.from(this.users.values()).find(
-      (user) => user.username === username,
-    );
+    const result = await db.select().from(users).where(eq(users.username, username)).limit(1);
+    return result[0];
   }
 
   async createUser(insertUser: InsertUser): Promise<User> {
-    const id = randomUUID();
-    const user: User = { ...insertUser, id };
-    this.users.set(id, user);
-    return user;
+    const result = await db.insert(users).values(insertUser).returning();
+    return result[0];
   }
 
   async createContactSubmission(submission: InsertContactSubmission): Promise<ContactSubmission> {
-    const id = randomUUID();
-    const contactSubmission: ContactSubmission = {
-      ...submission,
-      id,
-      submittedAt: new Date(),
-    };
-    this.contactSubmissions.set(id, contactSubmission);
-    return contactSubmission;
+    const result = await db.insert(contactSubmissions).values(submission).returning();
+    if (!result[0]) {
+      throw new Error("Failed to create contact submission");
+    }
+    return result[0];
   }
 
   async getAllContactSubmissions(): Promise<ContactSubmission[]> {
-    return Array.from(this.contactSubmissions.values());
+    return await db.select().from(contactSubmissions).orderBy(desc(contactSubmissions.submittedAt));
   }
 }
 
-export const storage = new MemStorage();
+export const storage = new DatabaseStorage();
