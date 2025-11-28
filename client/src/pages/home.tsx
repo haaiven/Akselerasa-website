@@ -30,7 +30,7 @@ import { useState, useCallback } from "react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
-import logoImg from "@assets/IMG-20251125-WA0007_1764034087379.jpg";
+import logoImg from "@assets/4F1C338A-FDB2-4543-BE22-5855149C9DBE_1764291840707.png";
 import streetFoodImg from "@assets/IMG-20251125-WA0005_1764033940096.jpg";
 import dashboardImg from "@assets/IMG-20251125-WA0001_1764033940133.jpg";
 import teamImg from "@assets/IMG-20251125-WA0003_1764033940115.jpg";
@@ -61,7 +61,7 @@ export default function Home() {
       id: 1,
       name: "Budi Santoso",
       business: "Nasi Goreng Pak Budi - Jakarta",
-      quote: "PT IJA's system transformed my street food cart into a thriving business. From one cart, I now manage 5 outlets with complete transparency.",
+      quote: "AKSELERASA's system transformed my street food cart into a thriving business. From one cart, I now manage 5 outlets with complete transparency.",
       results: "5x revenue growth in 12 months"
     },
     {
@@ -75,7 +75,7 @@ export default function Home() {
       id: 3,
       name: "Ahmad Hidayat",
       business: "Bakso Mas Ahmad - Surabaya",
-      quote: "Starting as a single pushcart vendor, PT IJA's franchise system helped me scale to 10 branches across Java. The automated tracking is a game changer.",
+      quote: "Starting as a single pushcart vendor, AKSELERASA's franchise system helped me scale to 10 branches across Java. The automated tracking is a game changer.",
       results: "10 outlets in 18 months"
     },
     {
@@ -140,11 +140,11 @@ export default function Home() {
             <div className="flex items-center gap-3">
               <img 
                 src={logoImg} 
-                alt="PT IJA Logo" 
+                alt="AKSELERASA Logo" 
                 className="h-12 w-12 object-contain"
                 data-testid="img-logo"
               />
-              <span className="text-xl font-bold text-foreground" data-testid="text-brand-name">PT IJA</span>
+              <span className="text-xl font-bold text-foreground" style={{ fontFamily: "'Cinzel', serif" }} data-testid="text-brand-name">AKSELERASA</span>
             </div>
             
             <div className="hidden md:flex items-center gap-8">
@@ -258,7 +258,7 @@ export default function Home() {
                 Company Overview
               </h2>
               <p className="text-lg text-muted-foreground mb-6" data-testid="text-about-p1">
-                PT IJA is a digital system & operational technology company dedicated to helping businesses — especially street food and F&B outlets — optimize their operations through automated transaction tracking, performance monitoring, and scalable franchise development.
+                AKSELERASA is a digital system & operational technology company dedicated to helping businesses — especially street food and F&B outlets — optimize their operations through automated transaction tracking, performance monitoring, and scalable franchise development.
               </p>
               <p className="text-lg text-muted-foreground" data-testid="text-about-p2">
                 We combine application technology, data-driven decision making, and real operational field experience to help businesses grow faster, operate more efficiently, and replicate outlets without losing quality.
@@ -267,7 +267,7 @@ export default function Home() {
             <div className="relative">
               <img 
                 src={teamImg} 
-                alt="PT IJA Team" 
+                alt="AKSELERASA Team" 
                 className="rounded-md shadow-lg w-full"
                 data-testid="img-about"
               />
@@ -524,7 +524,7 @@ export default function Home() {
               Success Stories
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Real results from street food entrepreneurs who transformed their businesses with PT IJA
+              Real results from street food entrepreneurs who transformed their businesses with AKSELERASA
             </p>
           </div>
 
@@ -710,7 +710,7 @@ export default function Home() {
             <div className="max-w-2xl mx-auto">
               <img 
                 src={dashboardImg} 
-                alt="PT IJA Dashboard" 
+                alt="AKSELERASA Dashboard" 
                 className="rounded-md shadow-lg w-full"
                 data-testid="img-dashboard"
               />
@@ -847,8 +847,8 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <img src={logoImg} alt="PT IJA Logo" className="h-10 w-10 object-contain" />
-                <span className="text-xl font-bold">PT IJA</span>
+                <img src={logoImg} alt="AKSELERASA Logo" className="h-10 w-10 object-contain" />
+                <span className="text-xl font-bold" style={{ fontFamily: "'Cinzel', serif" }}>AKSELERASA</span>
               </div>
               <p className="text-muted-foreground text-sm">
                 PT Inovasi Jaya Akselera

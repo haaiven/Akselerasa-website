@@ -1,8 +1,8 @@
-# PT IJA Landing Website
+# AKSELERASA Landing Website
 
 ## Overview
 
-This is a landing website for PT IJA (PT Inovasi Jaya Akselera), a company that provides digital systems and operational technology solutions for street food businesses. The application is built as a full-stack TypeScript web application with a React frontend and Express backend, designed to showcase PT IJA's services, allow potential customers to contact the company, and provide information about their street food business transformation solutions.
+This is a landing website for AKSELERASA (PT Inovasi Jaya Akselera), a company that provides digital systems and operational technology solutions for street food businesses. The application is built as a full-stack TypeScript web application with a React frontend and Express backend, designed to showcase AKSELERASA's services, allow potential customers to contact the company, and provide information about their street food business transformation solutions.
 
 The site features a clean, modern design inspired by premium food industry websites, with sections for hero messaging, services, mission/values, market advantages, locations, ordering information, and contact forms.
 
