@@ -737,11 +737,18 @@ export default function Home() {
             </div>
 
             <div>
-              <h3 className="font-semibold mb-4">Address</h3>
-              <p className="text-muted-foreground text-sm">
-                Jl. Sudirman No. 123<br />
-                Jakarta Selatan, 12190<br />
-                Indonesia
+              <h3 className="font-semibold mb-4">Chat With Us</h3>
+              <Button 
+                size="lg" 
+                className="w-full text-lg py-6 bg-primary hover:bg-primary/90"
+                onClick={() => window.open('https://wa.me/6281234567890', '_blank')}
+                data-testid="button-footer-whatsapp"
+              >
+                <MessageCircle className="w-5 h-5 mr-2" />
+                Chat via WhatsApp
+              </Button>
+              <p className="text-muted-foreground text-sm text-center mt-4">
+                Fast response • Professional consultation • Customized solutions
               </p>
             </div>
           </div>
