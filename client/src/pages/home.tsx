@@ -43,7 +43,6 @@ export default function Home() {
   const missionAnimation = useScrollAnimation();
   const focusAnimation = useScrollAnimation();
   const testimonialsAnimation = useScrollAnimation();
-  const locationsAnimation = useScrollAnimation();
   const contactAnimation = useScrollAnimation();
   
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start" });
@@ -177,20 +176,6 @@ export default function Home() {
                 Success Stories
               </button>
               <button 
-                onClick={() => scrollToSection('locations')} 
-                className="text-foreground hover:text-primary transition-colors"
-                data-testid="link-locations"
-              >
-                Locations
-              </button>
-              <button 
-                onClick={() => scrollToSection('order')} 
-                className="text-foreground hover:text-primary transition-colors"
-                data-testid="link-order"
-              >
-                Order
-              </button>
-              <button 
                 onClick={() => scrollToSection('contact')} 
                 className="text-foreground hover:text-primary transition-colors"
                 data-testid="link-contact"
@@ -223,7 +208,7 @@ export default function Home() {
             <Button 
               size="lg" 
               className="text-lg px-8 py-6 bg-primary hover:bg-primary/90"
-              onClick={() => scrollToSection('order')}
+              onClick={() => scrollToSection('contact')}
               data-testid="button-join-now"
             >
               Join Now
@@ -583,164 +568,39 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Locations Section */}
-      <section id="locations" className="py-20 bg-background">
-        <div 
-          ref={locationsAnimation.ref}
-          className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${locationsAnimation.isVisible ? 'animate-fade-in' : 'opacity-0'}`}
-        >
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4" data-testid="text-locations-title">
-              Find Us
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Visit our offices and partner outlets
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Card data-testid="card-location-1">
-              <CardHeader>
-                <MapPin className="w-8 h-8 text-primary mb-2" />
-                <CardTitle>Jakarta Office</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-2">
-                <p className="text-muted-foreground">Jl. Sudirman No. 123</p>
-                <p className="text-muted-foreground">Jakarta Selatan, 12190</p>
-                <div className="flex items-center gap-2 text-sm text-muted-foreground pt-2">
-                  <Clock className="w-4 h-4" />
-                  <span>Mon-Fri: 9AM - 6PM</span>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card data-testid="card-location-2">
-              <CardHeader>
-                <MapPin className="w-8 h-8 text-primary mb-2" />
-                <CardTitle>Bandung Office</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-2">
-                <p className="text-muted-foreground">Jl. Asia Afrika No. 45</p>
-                <p className="text-muted-foreground">Bandung, 40261</p>
-                <div className="flex items-center gap-2 text-sm text-muted-foreground pt-2">
-                  <Clock className="w-4 h-4" />
-                  <span>Mon-Fri: 9AM - 6PM</span>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card data-testid="card-location-3">
-              <CardHeader>
-                <MapPin className="w-8 h-8 text-primary mb-2" />
-                <CardTitle>Surabaya Office</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-2">
-                <p className="text-muted-foreground">Jl. Tunjungan No. 78</p>
-                <p className="text-muted-foreground">Surabaya, 60275</p>
-                <div className="flex items-center gap-2 text-sm text-muted-foreground pt-2">
-                  <Clock className="w-4 h-4" />
-                  <span>Mon-Fri: 9AM - 6PM</span>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-4">
-            <div className="h-64 md:h-80 rounded-md overflow-hidden shadow-md" data-testid="map-jakarta">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.157076726033!2d106.8207584!3d-6.2087634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTInMzEuNSJTIDEwNsKwNDknMTUuMSJF!5e0!3m2!1sen!2sid!4v1732518000000!5m2!1sen!2sid"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Jakarta Office - Jl. Sudirman"
-              ></iframe>
-            </div>
-            <div className="h-64 md:h-80 rounded-md overflow-hidden shadow-md" data-testid="map-bandung">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.898517676516!2d107.6169478!3d-6.9174639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwNTUnMDIuOSJTIDEwN8KwMzcnMDQuOSJF!5e0!3m2!1sen!2sid!4v1732518000000!5m2!1sen!2sid"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Bandung Office - Jl. Asia Afrika"
-              ></iframe>
-            </div>
-            <div className="h-64 md:h-80 rounded-md overflow-hidden shadow-md" data-testid="map-surabaya">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.553917244925!2d112.7499133!3d-7.2574719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwMTUnMjYuOSJTIDExMsKwNDUnMDcuNSJF!5e0!3m2!1sen!2sid!4v1732518000000!5m2!1sen!2sid"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Surabaya Office - Jl. Tunjungan"
-              ></iframe>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Order Section */}
-      <section id="order" className="py-20 bg-card">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6" data-testid="text-order-title">
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl text-muted-foreground mb-12" data-testid="text-order-subtitle">
-            Connect with us via WhatsApp for a quick consultation. We'll respond within minutes and help you transform your street food business.
-          </p>
-          
-          <div className="space-y-6">
-            <Button 
-              size="lg" 
-              className="text-lg px-12 py-6 bg-primary hover:bg-primary/90"
-              onClick={() => window.open('https://wa.me/6281234567890', '_blank')}
-              data-testid="button-whatsapp"
-            >
-              <MessageCircle className="w-5 h-5 mr-2" />
-              Order via WhatsApp
-            </Button>
-            
-            <div className="max-w-2xl mx-auto">
-              <img 
-                src={dashboardImg} 
-                alt="AKSELERASA Dashboard" 
-                className="rounded-md shadow-lg w-full"
-                data-testid="img-dashboard"
-              />
-            </div>
-            
-            <p className="text-muted-foreground">
-              Fast response • Professional consultation • Customized solutions
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact & Newsletter Section */}
-      <section id="contact" className="py-20 bg-background">
+      {/* Contact Section - Combined Ready to Get Started + Get in Touch */}
+      <section id="contact" className="py-20 bg-card">
         <div 
           ref={contactAnimation.ref}
           className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${contactAnimation.isVisible ? 'animate-fade-in' : 'opacity-0'}`}
         >
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4" data-testid="text-contact-title">
-              Get in Touch
+              Ready to Get Started?
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Have questions? We'd love to hear from you
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto" data-testid="text-contact-subtitle">
+              Connect with us for a quick consultation. We'll respond within minutes and help you transform your street food business.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <div className="space-y-6 mb-8">
+          <div className="grid lg:grid-cols-2 gap-12">
+            <div className="space-y-8">
+              <div className="text-center lg:text-left">
+                <Button 
+                  size="lg" 
+                  className="text-lg px-12 py-6 bg-primary hover:bg-primary/90"
+                  onClick={() => window.open('https://wa.me/6281234567890', '_blank')}
+                  data-testid="button-whatsapp"
+                >
+                  <MessageCircle className="w-5 h-5 mr-2" />
+                  Chat via WhatsApp
+                </Button>
+                <p className="text-muted-foreground mt-4">
+                  Fast response • Professional consultation • Customized solutions
+                </p>
+              </div>
+
+              <div className="space-y-6">
                 <div className="flex items-start gap-4" data-testid="contact-phone">
                   <Phone className="w-6 h-6 text-primary mt-1" />
                   <div>
@@ -753,7 +613,7 @@ export default function Home() {
                   <Mail className="w-6 h-6 text-primary mt-1" />
                   <div>
                     <h3 className="font-semibold mb-1">Email</h3>
-                    <p className="text-muted-foreground">info@ptija.com</p>
+                    <p className="text-muted-foreground">info@akselerasa.com</p>
                   </div>
                 </div>
 
@@ -761,12 +621,12 @@ export default function Home() {
                   <Instagram className="w-6 h-6 text-primary mt-1" />
                   <div>
                     <h3 className="font-semibold mb-1">Instagram</h3>
-                    <p className="text-muted-foreground">@ptija.official</p>
+                    <p className="text-muted-foreground">@akselerasa.official</p>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-card p-6 rounded-md">
+              <div className="bg-background p-6 rounded-md">
                 <h3 className="text-xl font-semibold mb-4">Subscribe to Our Newsletter</h3>
                 <div className="flex gap-2">
                   <Input 
