@@ -35,6 +35,8 @@ import streetFoodImg from "@assets/IMG-20251125-WA0005_1764033940096.jpg";
 import dashboardImg from "@assets/IMG-20251125-WA0001_1764033940133.jpg";
 import teamImg from "@assets/IMG-20251125-WA0003_1764033940115.jpg";
 import cartImg from "@assets/77AE5969-6F1D-4C76-A8E6-09F470C2E453_1764314138216.png";
+import hollandLogo from "@assets/c0db033d-0dad-47b2-8a08-6d203356e20a_brand-logo_1589291484200_1764316807917.jpg";
+import pukisLogo from "@assets/images_1764316799272.jpeg";
 
 export default function Home() {
   const { toast } = useToast();
@@ -454,71 +456,57 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Market Focus Section */}
-      <section id="focus" className="py-20 bg-card">
+      {/* Portfolio Section */}
+      <section id="portfolio" className="py-20 bg-card">
         <div 
           ref={focusAnimation.ref}
           className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${focusAnimation.isVisible ? 'animate-slide-in-right' : 'opacity-0'}`}
         >
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4" data-testid="text-focus-title">
-              Our Market Focus
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4" data-testid="text-portfolio-title">
+              Our Portfolio
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              What makes us different
+              Brand partners yang sudah bekerja sama dengan AKSELERASA
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="text-center" data-testid="focus-item-1">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
-                <Target className="w-8 h-8 text-primary" />
+          <div className="grid md:grid-cols-2 gap-8">
+            <Card className="hover-elevate overflow-hidden" data-testid="card-portfolio-holland">
+              <div className="aspect-video bg-white flex items-center justify-center p-8">
+                <img 
+                  src={hollandLogo} 
+                  alt="Holland Mini Café Logo" 
+                  className="max-h-full max-w-full object-contain"
+                />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Real Field Experience</h3>
-              <p className="text-muted-foreground">
-                Built from real field experience, not only digital theory
-              </p>
-            </div>
+              <CardHeader>
+                <CardTitle className="text-2xl">Holland Mini Café</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  Konsep usaha yang menggabungkan suasana modern dengan cita rasa khas tradisional Indonesia. Dengan menu andalan berupa martabak manis (terangbulan) dan martabak telur (martabak asin), serta variasi minuman kopi nusantara, Holland Mini Café menjadi destinasi utama bagi pecinta kuliner yang ingin menikmati hidangan berkualitas dalam suasana yang nyaman.
+                </p>
+              </CardContent>
+            </Card>
 
-            <div className="text-center" data-testid="focus-item-2">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
-                <Smartphone className="w-8 h-8 text-primary" />
+            <Card className="hover-elevate overflow-hidden" data-testid="card-portfolio-pukis">
+              <div className="aspect-video bg-[#F5A623] flex items-center justify-center p-8">
+                <img 
+                  src={pukisLogo} 
+                  alt="Pukis Kota Baru Logo" 
+                  className="max-h-full max-w-full object-contain"
+                />
               </div>
-              <h3 className="text-xl font-semibold mb-3">UMKM Specific</h3>
-              <p className="text-muted-foreground">
-                Designed specifically for street food & UMKM, not generic systems
-              </p>
-            </div>
-
-            <div className="text-center" data-testid="focus-item-3">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
-                <Layers className="w-8 h-8 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Operational Feasibility</h3>
-              <p className="text-muted-foreground">
-                Focused on operational feasibility + scalable expansion
-              </p>
-            </div>
-
-            <div className="text-center" data-testid="focus-item-4">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
-                <BarChart3 className="w-8 h-8 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold mb-3">All-in-One System</h3>
-              <p className="text-muted-foreground">
-                One system for all outlets — transactions, stock, reports, and training
-              </p>
-            </div>
-
-            <div className="text-center" data-testid="focus-item-5">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
-                <Shield className="w-8 h-8 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Complete Business Systems</h3>
-              <p className="text-muted-foreground">
-                We don't just build apps — we build business systems
-              </p>
-            </div>
+              <CardHeader>
+                <CardTitle className="text-2xl">Pukis Kota Baru</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  Jajanan tradisional yang sudah familiar di Indonesia, pelopor pukis dengan ukuran jumbo, hadir dengan berbagai pilihan varian rasa yang lezat dan menggugah selera.
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
