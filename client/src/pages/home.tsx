@@ -438,6 +438,18 @@ export default function Home() {
                 </p>
               </CardContent>
             </Card>
+
+            <Card className="hover-elevate" data-testid="card-mission-6">
+              <CardHeader>
+                <TrendingUp className="w-10 h-10 text-primary mb-3" />
+                <CardTitle className="text-xl">Infinitely Scalable</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  Scalable from one cart to hundreds of branches
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -499,16 +511,6 @@ export default function Home() {
             </div>
 
             <div className="text-center" data-testid="focus-item-5">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
-                <TrendingUp className="w-8 h-8 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Infinitely Scalable</h3>
-              <p className="text-muted-foreground">
-                Scalable from one cart to hundreds of branches
-              </p>
-            </div>
-
-            <div className="text-center" data-testid="focus-item-6">
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
                 <Shield className="w-8 h-8 text-primary" />
               </div>
