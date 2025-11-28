@@ -52,23 +52,14 @@
   opacity: 0;
 }
 
-/* WhatsApp Floating Button with Orbiting Cart Animation */
-@keyframes orbit {
-  from {
-    transform: rotate(0deg) translateX(50px) rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg) translateX(50px) rotate(-360deg);
-  }
-}
-
+/* WhatsApp Floating Button with Scroll-Based Orbiting Cart */
 .whatsapp-float-container {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
   z-index: 50;
-  width: 120px;
-  height: 120px;
+  width: 90px;
+  height: 90px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -103,10 +94,11 @@
 
 .orbiting-cart {
   position: absolute;
-  width: 30px;
-  height: 30px;
-  animation: orbit 4s linear infinite;
-  z-index: 1;
+  width: 28px;
+  height: 28px;
+  z-index: 3;
+  transition: transform 0.1s linear;
+  pointer-events: none;
 }
 
 .orbiting-cart img {

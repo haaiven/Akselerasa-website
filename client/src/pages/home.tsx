@@ -26,7 +26,7 @@ import {
   Layers,
   Globe
 } from "lucide-react";
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
@@ -55,6 +55,28 @@ export default function Home() {
   const scrollNext = useCallback(() => {
     if (emblaApi) emblaApi.scrollNext();
   }, [emblaApi]);
+
+  // Scroll-based cart orbit animation
+  const [cartRotation, setCartRotation] = useState(0);
+  const cartRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+    
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      const scrollDelta = currentScrollY - lastScrollY;
+      
+      // Update rotation based on scroll direction and amount
+      // Scroll down = clockwise (positive), Scroll up = counter-clockwise (negative)
+      setCartRotation(prev => prev + scrollDelta * 0.5);
+      
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const testimonials = [
     {
@@ -762,9 +784,15 @@ export default function Home() {
         </div>
       </footer>
 
-      {/* Floating WhatsApp Button with Orbiting Cart */}
+      {/* Floating WhatsApp Button with Scroll-Based Orbiting Cart */}
       <div className="whatsapp-float-container" data-testid="whatsapp-float-container">
-        <div className="orbiting-cart">
+        <div 
+          ref={cartRef}
+          className="orbiting-cart"
+          style={{
+            transform: `rotate(${cartRotation}deg) translateX(42px) rotate(${-cartRotation}deg)`
+          }}
+        >
           <img src={cartImg} alt="Food Cart" />
         </div>
         <button
