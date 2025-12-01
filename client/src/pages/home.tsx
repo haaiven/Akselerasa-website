@@ -38,6 +38,7 @@ import teamImg from "@assets/IMG-20251125-WA0003_1764033940115.jpg";
 import cartImg from "@assets/77AE5969-6F1D-4C76-A8E6-09F470C2E453_1764314138216.png";
 import hollandLogo from "@assets/c0db033d-0dad-47b2-8a08-6d203356e20a_brand-logo_1589291484200_1764316807917.jpg";
 import pukisLogo from "@assets/images_1764316799272.jpeg";
+import contactImg from "@assets/IMG-20251128-WA0005_1764559092155.jpg";
 
 export default function Home() {
   const { toast } = useToast();
@@ -516,14 +517,15 @@ export default function Home() {
                     <p className="text-muted-foreground">info@akselerasa.com</p>
                   </div>
                 </div>
+              </div>
 
-                <div className="flex items-start gap-4" data-testid="contact-instagram">
-                  <Instagram className="w-6 h-6 text-primary mt-1" />
-                  <div>
-                    <h3 className="font-semibold mb-1">Instagram</h3>
-                    <p className="text-muted-foreground">@akselerasa.official</p>
-                  </div>
-                </div>
+              <div className="mt-8">
+                <img 
+                  src={contactImg} 
+                  alt="Business Partnership" 
+                  className="rounded-md shadow-lg w-full"
+                  data-testid="img-contact"
+                />
               </div>
 
               <div className="bg-background p-6 rounded-md">
