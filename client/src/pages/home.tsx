@@ -352,12 +352,12 @@ export default function Home() {
               </CardHeader>
             </Card>
 
-            <Card className="hover-elevate" data-testid="card-service-brand">
+            <Card className="hover-elevate" data-testid="card-service-pos">
               <CardHeader>
-                <Palette className="w-12 h-12 text-primary mb-4" />
-                <CardTitle>Brand & Identity Support</CardTitle>
+                <Smartphone className="w-12 h-12 text-primary mb-4" />
+                <CardTitle>Personalized POS System</CardTitle>
                 <CardDescription>
-                  Naming, logo, design, and digital presence setup
+                  Custom point-of-sale solutions tailored to your business needs
                 </CardDescription>
               </CardHeader>
             </Card>
