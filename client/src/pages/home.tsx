@@ -24,7 +24,8 @@ import {
   Zap,
   Shield,
   Layers,
-  Globe
+  Globe,
+  CreditCard
 } from "lucide-react";
 import { useState, useCallback, useEffect, useRef } from "react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
@@ -354,7 +355,7 @@ export default function Home() {
 
             <Card className="hover-elevate" data-testid="card-service-pos">
               <CardHeader>
-                <Smartphone className="w-12 h-12 text-primary mb-4" />
+                <CreditCard className="w-12 h-12 text-primary mb-4" />
                 <CardTitle>Personalized POS System</CardTitle>
                 <CardDescription>
                   Custom point-of-sale solutions tailored to your business needs
