@@ -298,216 +298,92 @@ export default function Home() {
               What We Offer
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Comprehensive solutions for modern street food businesses
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="hover-elevate" data-testid="card-service-tracking">
-              <CardHeader>
-                <Smartphone className="w-12 h-12 text-primary mb-4" />
-                <CardTitle>Outlet Transaction Tracking App</CardTitle>
-                <CardDescription>
-                  Daily revenue, COGS, stock & automated reporting
-                </CardDescription>
-              </CardHeader>
-            </Card>
-
-            <Card className="hover-elevate" data-testid="card-service-monitoring">
-              <CardHeader>
-                <BarChart3 className="w-12 h-12 text-primary mb-4" />
-                <CardTitle>Real-Time Monitoring Dashboard</CardTitle>
-                <CardDescription>
-                  Owners can track outlet performance from anywhere
-                </CardDescription>
-              </CardHeader>
-            </Card>
-
-            <Card className="hover-elevate" data-testid="card-service-sop">
-              <CardHeader>
-                <FileText className="w-12 h-12 text-primary mb-4" />
-                <CardTitle>Operational SOP System</CardTitle>
-                <CardDescription>
-                  Standardized workflow for easy outlet replication
-                </CardDescription>
-              </CardHeader>
-            </Card>
-
-            <Card className="hover-elevate" data-testid="card-service-franchise">
-              <CardHeader>
-                <Users className="w-12 h-12 text-primary mb-4" />
-                <CardTitle>Franchise Development System</CardTitle>
-                <CardDescription>
-                  Business model, partner structure, & monitoring tools
-                </CardDescription>
-              </CardHeader>
-            </Card>
-
-            <Card className="hover-elevate" data-testid="card-service-analytics">
-              <CardHeader>
-                <TrendingUp className="w-12 h-12 text-primary mb-4" />
-                <CardTitle>Data Analytics & Decision Tools</CardTitle>
-                <CardDescription>
-                  Convert daily operations into actionable insights
-                </CardDescription>
-              </CardHeader>
-            </Card>
-
-            <Card className="hover-elevate" data-testid="card-service-pos">
-              <CardHeader>
-                <CreditCard className="w-12 h-12 text-primary mb-4" />
-                <CardTitle>Personalized POS System</CardTitle>
-                <CardDescription>
-                  Custom point-of-sale solutions tailored to your business needs
-                </CardDescription>
-              </CardHeader>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Our Mission Section */}
-      <section id="mission" className="py-20 bg-background">
-        <div 
-          ref={missionAnimation.ref}
-          className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${missionAnimation.isVisible ? 'animate-slide-in-left' : 'opacity-0'}`}
-        >
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4" data-testid="text-mission-title">
-              Our Mission
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Empowering street food businesses with technology and systems
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Card className="hover-elevate" data-testid="card-mission-1">
-              <CardHeader>
-                <Target className="w-10 h-10 text-primary mb-3" />
-                <CardTitle className="text-xl">Field-Friendly Technology</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  Build easy-to-use and field-friendly technology solutions for real business operations
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="hover-elevate" data-testid="card-mission-2">
-              <CardHeader>
-                <Zap className="w-10 h-10 text-primary mb-3" />
-                <CardTitle className="text-xl">Real-Time Dashboards</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  Provide real-time transaction & outlet performance dashboards for faster decision making
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="hover-elevate" data-testid="card-mission-3">
-              <CardHeader>
-                <Layers className="w-10 h-10 text-primary mb-3" />
-                <CardTitle className="text-xl">Scalable Franchise Model</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  Develop a scalable street food franchise model — from one outlet to a hundred
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="hover-elevate" data-testid="card-mission-4">
-              <CardHeader>
-                <Shield className="w-10 h-10 text-primary mb-3" />
-                <CardTitle className="text-xl">UMKM Empowerment</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  Empower UMKM with data, systems, and modern workflows for sustainable growth
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="hover-elevate" data-testid="card-mission-5">
-              <CardHeader>
-                <Globe className="w-10 h-10 text-primary mb-3" />
-                <CardTitle className="text-xl">Technology for All</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  Bridge technology with offline business needs — ensuring technology benefits everyone, not only big corporations
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="hover-elevate" data-testid="card-mission-6">
-              <CardHeader>
-                <TrendingUp className="w-10 h-10 text-primary mb-3" />
-                <CardTitle className="text-xl">Infinitely Scalable</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  Scalable from one cart to hundreds of branches
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Portfolio Section */}
-      <section id="portfolio" className="py-20 bg-card">
-        <div 
-          ref={focusAnimation.ref}
-          className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${focusAnimation.isVisible ? 'animate-slide-in-right' : 'opacity-0'}`}
-        >
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4" data-testid="text-portfolio-title">
-              Our Portfolio
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Brand partners powered by AKSELERASA
-            </p>
-          </div>
-
           <div className="grid md:grid-cols-2 gap-8">
-            <Card className="hover-elevate overflow-hidden" data-testid="card-portfolio-holland">
-              <div className="aspect-video bg-white flex items-center justify-center p-8">
-                <img 
-                  src={hollandLogo} 
-                  alt="Holland Mini Café Logo" 
-                  className="max-h-full max-w-full object-contain"
-                />
-              </div>
+            <Card className="hover-elevate" data-testid="card-offer-umkm">
               <CardHeader>
-                <CardTitle className="text-2xl">Holland Mini Café</CardTitle>
+                <Shield className="w-12 h-12 text-primary mb-4" />
+                <CardTitle className="text-2xl">UMKM Empowerment</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  A business concept that combines modern ambiance with authentic traditional Indonesian flavors. Featuring signature dishes like sweet martabak (terangbulan) and savory egg martabak, along with a variety of Indonesian coffee drinks, Holland Mini Café is the ultimate destination for food lovers seeking quality dishes in a comfortable atmosphere.
+                  We equip street food entrepreneurs with accessible tools and field mentoring so they can modernize without losing their local character.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="hover-elevate overflow-hidden" data-testid="card-portfolio-pukis">
-              <div className="aspect-video bg-[#F5A623] flex items-center justify-center p-8">
-                <img 
-                  src={pukisLogo} 
-                  alt="Pukis Kota Baru Logo" 
-                  className="max-h-full max-w-full object-contain"
-                />
-              </div>
+            <Card className="hover-elevate" data-testid="card-offer-pos">
               <CardHeader>
-                <CardTitle className="text-2xl">Pukis Kota Baru</CardTitle>
+                <CreditCard className="w-12 h-12 text-primary mb-4" />
+                <CardTitle className="text-2xl">Personalized POS System</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  A beloved traditional Indonesian snack, pioneering jumbo-sized pukis with a wide variety of delicious flavor options that delight every palate.
+                  We deploy modular POS flows tailored to each menu, staffing model, and growth pace so transactions stay effortless.
                 </p>
               </CardContent>
             </Card>
+
+            <Card className="hover-elevate" data-testid="card-offer-operational">
+              <CardHeader>
+                <FileText className="w-12 h-12 text-primary mb-4" />
+                <CardTitle className="text-2xl">Operational</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  We standardize SOPs, training, and supply routines, ensuring every outlet can replicate quality from day one.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover-elevate" data-testid="card-offer-data">
+              <CardHeader>
+                <TrendingUp className="w-12 h-12 text-primary mb-4" />
+                <CardTitle className="text-2xl">Data Driven</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  We transform daily transactions into dashboards and proactive alerts that guide smarter purchasing and expansion decisions.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Trusted By Section */}
+          <div className="mt-20">
+            <h3 className="text-2xl font-semibold text-center text-foreground mb-8" data-testid="text-trusted-by">
+              Trusted By
+            </h3>
+            <div className="grid md:grid-cols-2 gap-8">
+              <Card className="hover-elevate overflow-hidden" data-testid="card-portfolio-holland">
+                <div className="aspect-video bg-white flex items-center justify-center p-8">
+                  <img 
+                    src={hollandLogo} 
+                    alt="Holland Mini Café Logo" 
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </div>
+                <CardHeader className="text-center">
+                  <CardTitle>Holland Mini Café</CardTitle>
+                </CardHeader>
+              </Card>
+
+              <Card className="hover-elevate overflow-hidden" data-testid="card-portfolio-pukis">
+                <div className="aspect-video bg-[#F5A623] flex items-center justify-center p-8">
+                  <img 
+                    src={pukisLogo} 
+                    alt="Pukis Kota Baru Logo" 
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </div>
+                <CardHeader className="text-center">
+                  <CardTitle>Pukis Kota Baru</CardTitle>
+                </CardHeader>
+              </Card>
+            </div>
           </div>
         </div>
       </section>
