@@ -488,12 +488,11 @@ export default function Home() {
             <div className="space-y-8">
               <div className="text-center lg:text-left">
                 <Button 
-                  size="lg" 
-                  className="text-lg px-12 py-6 bg-primary hover:bg-primary/90"
+                  className="bg-primary hover:bg-primary/90"
                   onClick={() => window.open('https://wa.me/6285691070999', '_blank')}
                   data-testid="button-whatsapp"
                 >
-                  <MessageCircle className="w-5 h-5 mr-2" />
+                  <MessageCircle className="w-4 h-4 mr-2" />
                   Chat via WhatsApp
                 </Button>
                 <p className="text-muted-foreground mt-4">
