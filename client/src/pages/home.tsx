@@ -366,9 +366,14 @@ export default function Home() {
                     className="max-h-full max-w-full object-contain"
                   />
                 </div>
-                <CardHeader className="text-center">
-                  <CardTitle>Holland Mini Café</CardTitle>
+                <CardHeader>
+                  <CardTitle className="text-2xl">Holland Mini Café</CardTitle>
                 </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    A business concept that combines modern ambiance with authentic traditional Indonesian flavors. Featuring signature dishes like sweet martabak (terangbulan) and savory egg martabak, along with a variety of Indonesian coffee drinks, Holland Mini Café is the ultimate destination for food lovers seeking quality dishes in a comfortable atmosphere.
+                  </p>
+                </CardContent>
               </Card>
 
               <Card className="hover-elevate overflow-hidden" data-testid="card-portfolio-pukis">
@@ -379,9 +384,14 @@ export default function Home() {
                     className="max-h-full max-w-full object-contain"
                   />
                 </div>
-                <CardHeader className="text-center">
-                  <CardTitle>Pukis Kota Baru</CardTitle>
+                <CardHeader>
+                  <CardTitle className="text-2xl">Pukis Kota Baru</CardTitle>
                 </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    A beloved traditional Indonesian snack, pioneering jumbo-sized pukis with a wide variety of delicious flavor options that delight every palate.
+                  </p>
+                </CardContent>
               </Card>
             </div>
           </div>
