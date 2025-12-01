@@ -354,8 +354,8 @@ export default function Home() {
 
           {/* Trusted By Section */}
           <div className="mt-20">
-            <h3 className="text-2xl font-semibold text-center text-foreground mb-8" data-testid="text-trusted-by">
-              Trusted By
+            <h3 className="text-2xl font-semibold text-center text-foreground mb-8" data-testid="text-our-clients">
+              Our Clients
             </h3>
             <div className="grid md:grid-cols-2 gap-8">
               <Card className="hover-elevate overflow-hidden" data-testid="card-portfolio-holland">
