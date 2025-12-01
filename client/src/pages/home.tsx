@@ -500,20 +500,20 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="space-y-6">
-                <div className="flex items-start gap-4" data-testid="contact-phone">
-                  <Phone className="w-6 h-6 text-primary mt-1" />
+              <div className="grid grid-cols-2 gap-6">
+                <div className="flex items-start gap-3" data-testid="contact-phone">
+                  <Phone className="w-5 h-5 text-primary mt-1" />
                   <div>
-                    <h3 className="font-semibold mb-1">Phone / WhatsApp</h3>
-                    <p className="text-muted-foreground">+62 856-9107-0999</p>
+                    <h3 className="font-semibold text-sm mb-1">Phone / WhatsApp</h3>
+                    <p className="text-muted-foreground text-sm">+62 856-9107-0999</p>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4" data-testid="contact-email">
-                  <Mail className="w-6 h-6 text-primary mt-1" />
+                <div className="flex items-start gap-3" data-testid="contact-email">
+                  <Mail className="w-5 h-5 text-primary mt-1" />
                   <div>
-                    <h3 className="font-semibold mb-1">Email</h3>
-                    <p className="text-muted-foreground">info@akselerasa.com</p>
+                    <h3 className="font-semibold text-sm mb-1">Email</h3>
+                    <p className="text-muted-foreground text-sm">info@akselerasa.com</p>
                   </div>
                 </div>
               </div>
