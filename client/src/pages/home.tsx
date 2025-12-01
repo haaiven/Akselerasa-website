@@ -602,7 +602,7 @@ export default function Home() {
                 <Button 
                   size="lg" 
                   className="text-lg px-12 py-6 bg-primary hover:bg-primary/90"
-                  onClick={() => window.open('https://wa.me/6281234567890', '_blank')}
+                  onClick={() => window.open('https://wa.me/6285691070999', '_blank')}
                   data-testid="button-whatsapp"
                 >
                   <MessageCircle className="w-5 h-5 mr-2" />
@@ -618,7 +618,7 @@ export default function Home() {
                   <Phone className="w-6 h-6 text-primary mt-1" />
                   <div>
                     <h3 className="font-semibold mb-1">Phone / WhatsApp</h3>
-                    <p className="text-muted-foreground">+62 812-3456-7890</p>
+                    <p className="text-muted-foreground">+62 856-9107-0999</p>
                   </div>
                 </div>
 
@@ -754,7 +754,7 @@ export default function Home() {
               <Button 
                 size="lg" 
                 className="w-full text-lg py-6 bg-primary hover:bg-primary/90"
-                onClick={() => window.open('https://wa.me/6281234567890', '_blank')}
+                onClick={() => window.open('https://wa.me/6285691070999', '_blank')}
                 data-testid="button-footer-whatsapp"
               >
                 <MessageCircle className="w-5 h-5 mr-2" />
@@ -786,7 +786,7 @@ export default function Home() {
           <img src={cartImg} alt="Food Cart" />
         </div>
         <button
-          onClick={() => window.open('https://wa.me/6281234567890', '_blank')}
+          onClick={() => window.open('https://wa.me/6285691070999', '_blank')}
           className="whatsapp-button"
           data-testid="button-floating-whatsapp"
           aria-label="Chat via WhatsApp"
