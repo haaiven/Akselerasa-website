@@ -467,7 +467,7 @@ export default function Home() {
               Our Portfolio
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Brand partners yang sudah bekerja sama dengan AKSELERASA
+              Brand partners powered by AKSELERASA
             </p>
           </div>
 
@@ -485,7 +485,7 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Konsep usaha yang menggabungkan suasana modern dengan cita rasa khas tradisional Indonesia. Dengan menu andalan berupa martabak manis (terangbulan) dan martabak telur (martabak asin), serta variasi minuman kopi nusantara, Holland Mini Café menjadi destinasi utama bagi pecinta kuliner yang ingin menikmati hidangan berkualitas dalam suasana yang nyaman.
+                  A business concept that combines modern ambiance with authentic traditional Indonesian flavors. Featuring signature dishes like sweet martabak (terangbulan) and savory egg martabak, along with a variety of Indonesian coffee drinks, Holland Mini Café is the ultimate destination for food lovers seeking quality dishes in a comfortable atmosphere.
                 </p>
               </CardContent>
             </Card>
@@ -503,7 +503,7 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Jajanan tradisional yang sudah familiar di Indonesia, pelopor pukis dengan ukuran jumbo, hadir dengan berbagai pilihan varian rasa yang lezat dan menggugah selera.
+                  A beloved traditional Indonesian snack, pioneering jumbo-sized pukis with a wide variety of delicious flavor options that delight every palate.
                 </p>
               </CardContent>
             </Card>
