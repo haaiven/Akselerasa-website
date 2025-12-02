@@ -669,7 +669,20 @@ export default function Home() {
           style={{
             transform: `rotate(${cartRotation}deg)`
           }}
-        />
+        >
+          <svg viewBox="0 0 76 76" xmlns="http://www.w3.org/2000/svg">
+            <circle 
+              cx="38" 
+              cy="38" 
+              r="35" 
+              fill="none" 
+              stroke="#B86730" 
+              strokeWidth="2.5" 
+              strokeDasharray="8 6"
+              strokeLinecap="round"
+            />
+          </svg>
+        </div>
         <button
           onClick={() => window.open('https://wa.me/6285691070999', '_blank')}
           className="whatsapp-button"

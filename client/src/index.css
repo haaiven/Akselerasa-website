@@ -58,23 +58,23 @@
   bottom: 2rem;
   right: 2rem;
   z-index: 50;
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .whatsapp-button {
-  width: 56px;
-  height: 56px;
+  width: 52px;
+  height: 52px;
   background-color: #25D366;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: none;
   z-index: 2;
@@ -82,25 +82,28 @@
 
 .whatsapp-button:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.5);
 }
 
 .whatsapp-button svg {
-  width: 28px;
-  height: 28px;
+  width: 26px;
+  height: 26px;
   color: white;
   fill: white;
 }
 
 .rotating-dashed-border {
   position: absolute;
-  width: 74px;
-  height: 74px;
-  border-radius: 50%;
-  border: 2px dashed hsl(25 60% 45%);
+  width: 76px;
+  height: 76px;
   z-index: 1;
   transition: transform 0.05s linear;
   pointer-events: none;
+}
+
+.rotating-dashed-border svg {
+  width: 100%;
+  height: 100%;
 }
 
 /* LIGHT MODE - Business Card Theme: Cream, Amber, Maroon */
