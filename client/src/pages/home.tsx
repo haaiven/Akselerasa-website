@@ -672,43 +672,17 @@ export default function Home() {
             transform: `rotate(${cartRotation}deg)`
           }}
         >
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="brushGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#E85D04" />
-                <stop offset="50%" stopColor="#DC2F02" />
-                <stop offset="100%" stopColor="#D00000" />
-              </linearGradient>
-            </defs>
-            <g fill="none" stroke="url(#brushGradient)" strokeLinecap="round">
-              <path d="M50 8 Q52 5, 50 2" strokeWidth="2.5" />
-              <path d="M65 12 Q70 8, 72 5" strokeWidth="2" />
-              <path d="M78 20 Q83 16, 88 14" strokeWidth="2.5" />
-              <path d="M86 32 Q91 30, 95 28" strokeWidth="2" />
-              <path d="M90 48 Q94 48, 98 47" strokeWidth="2.5" />
-              <path d="M88 62 Q92 64, 96 66" strokeWidth="2" />
-              <path d="M82 76 Q86 80, 90 84" strokeWidth="2.5" />
-              <path d="M72 86 Q76 90, 78 94" strokeWidth="2" />
-              <path d="M58 92 Q58 96, 56 99" strokeWidth="2.5" />
-              <path d="M42 92 Q42 96, 44 99" strokeWidth="2" />
-              <path d="M28 86 Q24 90, 22 94" strokeWidth="2.5" />
-              <path d="M18 76 Q14 80, 10 84" strokeWidth="2" />
-              <path d="M12 62 Q8 64, 4 66" strokeWidth="2.5" />
-              <path d="M10 48 Q6 48, 2 47" strokeWidth="2" />
-              <path d="M14 32 Q9 30, 5 28" strokeWidth="2.5" />
-              <path d="M22 20 Q17 16, 12 14" strokeWidth="2" />
-              <path d="M35 12 Q30 8, 28 5" strokeWidth="2.5" />
-              <path d="M50 8 Q48 5, 50 2" strokeWidth="2" />
-              <path d="M60 10 Q63 6, 66 3" strokeWidth="1.8" />
-              <path d="M84 28 Q88 25, 92 22" strokeWidth="1.8" />
-              <path d="M92 55 Q96 56, 99 57" strokeWidth="1.8" />
-              <path d="M80 82 Q84 86, 87 90" strokeWidth="1.8" />
-              <path d="M50 94 Q50 97, 50 100" strokeWidth="1.8" />
-              <path d="M20 82 Q16 86, 13 90" strokeWidth="1.8" />
-              <path d="M8 55 Q4 56, 1 57" strokeWidth="1.8" />
-              <path d="M16 28 Q12 25, 8 22" strokeWidth="1.8" />
-              <path d="M40 10 Q37 6, 34 3" strokeWidth="1.8" />
-            </g>
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <circle 
+              cx="40" 
+              cy="40" 
+              r="36" 
+              fill="none" 
+              stroke="#B86730" 
+              strokeWidth="2" 
+              strokeDasharray="12 8 4 8"
+              strokeLinecap="round"
+            />
           </svg>
         </div>
         <button
