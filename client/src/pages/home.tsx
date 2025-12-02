@@ -31,6 +31,7 @@ import { useState, useCallback, useEffect, useRef } from "react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
+import { ThemeToggle } from "@/components/theme-toggle";
 import logoImg from "@assets/file_00000000731c7207a92bed4299b440fb_1764680794736.png";
 import streetFoodImg from "@assets/IMG-20251125-WA0005_1764033940096.jpg";
 import dashboardImg from "@assets/IMG-20251125-WA0001_1764033940133.jpg";
@@ -208,6 +209,7 @@ export default function Home() {
               >
                 Contact
               </button>
+              <ThemeToggle />
             </div>
           </div>
         </nav>
