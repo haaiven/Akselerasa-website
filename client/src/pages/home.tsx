@@ -670,15 +670,25 @@ export default function Home() {
             transform: `rotate(${cartRotation}deg)`
           }}
         >
-          <svg viewBox="0 0 76 76" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 90 90" xmlns="http://www.w3.org/2000/svg">
             <circle 
-              cx="38" 
-              cy="38" 
-              r="35" 
+              cx="45" 
+              cy="45" 
+              r="33" 
               fill="none" 
               stroke="#B86730" 
-              strokeWidth="2.5" 
-              strokeDasharray="8 6"
+              strokeWidth="2" 
+              strokeDasharray="6 5"
+              strokeLinecap="round"
+            />
+            <circle 
+              cx="45" 
+              cy="45" 
+              r="41" 
+              fill="none" 
+              stroke="#B86730" 
+              strokeWidth="2" 
+              strokeDasharray="6 5"
               strokeLinecap="round"
             />
           </svg>
