@@ -27,10 +27,8 @@ import {
   Globe,
   CreditCard
 } from "lucide-react";
-import { useState, useCallback, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import useEmblaCarousel from "embla-carousel-react";
-import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
 import logoImg from "@assets/file_00000000731c7207a92bed4299b440fb_1764680794736.png";
 import streetFoodImg from "@assets/IMG-20251125-WA0005_1764033940096.jpg";
@@ -47,18 +45,7 @@ export default function Home() {
   const servicesAnimation = useScrollAnimation();
   const missionAnimation = useScrollAnimation();
   const focusAnimation = useScrollAnimation();
-  const testimonialsAnimation = useScrollAnimation();
   const contactAnimation = useScrollAnimation();
-  
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start" });
-
-  const scrollPrev = useCallback(() => {
-    if (emblaApi) emblaApi.scrollPrev();
-  }, [emblaApi]);
-
-  const scrollNext = useCallback(() => {
-    if (emblaApi) emblaApi.scrollNext();
-  }, [emblaApi]);
 
   // Scroll-based cart orbit animation
   const [cartRotation, setCartRotation] = useState(0);
@@ -82,36 +69,6 @@ export default function Home() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const testimonials = [
-    {
-      id: 1,
-      name: "Budi Santoso",
-      business: "Nasi Goreng Pak Budi - Jakarta",
-      quote: "AKSELERASA's system transformed my street food cart into a thriving business. From one cart, I now manage 5 outlets with complete transparency.",
-      results: "5x revenue growth in 12 months"
-    },
-    {
-      id: 2,
-      name: "Siti Rahayu",
-      business: "Warung Soto Ayam - Bandung",
-      quote: "The real-time dashboard helps me track all locations instantly. I can make decisions faster and spot problems before they become losses.",
-      results: "Reduced food waste by 40%"
-    },
-    {
-      id: 3,
-      name: "Ahmad Hidayat",
-      business: "Bakso Mas Ahmad - Surabaya",
-      quote: "Starting as a single pushcart vendor, AKSELERASA's franchise system helped me scale to 10 branches across Java. The automated tracking is a game changer.",
-      results: "10 outlets in 18 months"
-    },
-    {
-      id: 4,
-      name: "Dewi Lestari",
-      business: "Es Teler 77 Franchise - Jakarta",
-      quote: "Their complete business system covers everything from menu standardization to staff training. We maintain quality across all locations effortlessly.",
-      results: "Consistent 4.8★ rating across all branches"
-    }
-  ];
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -194,13 +151,6 @@ export default function Home() {
                 data-testid="link-services"
               >
                 Our Services
-              </button>
-              <button 
-                onClick={() => scrollToSection('testimonials')} 
-                className="text-foreground hover:text-primary transition-colors"
-                data-testid="link-testimonials"
-              >
-                Success Stories
               </button>
               <button 
                 onClick={() => scrollToSection('contact')} 
@@ -395,76 +345,6 @@ export default function Home() {
                   </p>
                 </CardContent>
               </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials & Case Studies Section */}
-      <section id="testimonials" className="py-20 bg-background">
-        <div 
-          ref={testimonialsAnimation.ref}
-          className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${testimonialsAnimation.isVisible ? 'animate-fade-in' : 'opacity-0'}`}
-        >
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4" data-testid="text-testimonials-title">
-              Success Stories
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Real results from street food entrepreneurs who transformed their businesses with AKSELERASA
-            </p>
-          </div>
-
-          <div className="relative">
-            <div className="overflow-hidden" ref={emblaRef}>
-              <div className="flex gap-6">
-                {testimonials.map((testimonial) => (
-                  <div 
-                    key={testimonial.id}
-                    className="flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_33.333%] min-w-0"
-                    data-testid={`testimonial-${testimonial.id}`}
-                  >
-                    <Card className="h-full">
-                      <CardHeader>
-                        <Quote className="w-10 h-10 text-primary mb-4" />
-                        <CardDescription className="text-base italic text-foreground">
-                          "{testimonial.quote}"
-                        </CardDescription>
-                      </CardHeader>
-                      <CardContent className="space-y-4">
-                        <div>
-                          <p className="font-semibold text-foreground">{testimonial.name}</p>
-                          <p className="text-sm text-muted-foreground">{testimonial.business}</p>
-                        </div>
-                        <div className="bg-primary/10 p-3 rounded-md">
-                          <p className="text-sm font-medium text-primary">{testimonial.results}</p>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="flex justify-center gap-4 mt-8">
-              <Button 
-                variant="outline" 
-                size="icon"
-                onClick={scrollPrev}
-                data-testid="button-carousel-prev"
-                aria-label="Previous testimonial"
-              >
-                <ChevronLeft className="w-5 h-5" />
-              </Button>
-              <Button 
-                variant="outline" 
-                size="icon"
-                onClick={scrollNext}
-                data-testid="button-carousel-next"
-                aria-label="Next testimonial"
-              >
-                <ChevronRight className="w-5 h-5" />
-              </Button>
             </div>
           </div>
         </div>
