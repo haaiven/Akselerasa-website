@@ -31,7 +31,7 @@ import { useState, useCallback, useEffect, useRef } from "react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
-import logoImg from "@assets/4F1C338A-FDB2-4543-BE22-5855149C9DBE_1764291840707.png";
+import logoImg from "@assets/IMG-20251202-WA0005_1764680477721.jpg";
 import streetFoodImg from "@assets/IMG-20251125-WA0005_1764033940096.jpg";
 import dashboardImg from "@assets/IMG-20251125-WA0001_1764033940133.jpg";
 import teamImg from "@assets/IMG-20251125-WA0003_1764033940115.jpg";
