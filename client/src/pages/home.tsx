@@ -35,7 +35,6 @@ import logoImg from "@assets/file_00000000731c7207a92bed4299b440fb_1764680794736
 import streetFoodImg from "@assets/IMG-20251125-WA0005_1764033940096.jpg";
 import dashboardImg from "@assets/IMG-20251125-WA0001_1764033940133.jpg";
 import teamImg from "@assets/IMG-20251125-WA0003_1764033940115.jpg";
-import cartImg from "@assets/77AE5969-6F1D-4C76-A8E6-09F470C2E453_1764314138216.png";
 import hollandLogo from "@assets/c0db033d-0dad-47b2-8a08-6d203356e20a_brand-logo_1589291484200_1764316807917.jpg";
 import pukisLogo from "@assets/images_1764316799272.jpeg";
 import contactImg from "@assets/IMG-20251128-WA0005_1764559092155.jpg";
@@ -662,17 +661,15 @@ export default function Home() {
         </div>
       </footer>
 
-      {/* Floating WhatsApp Button with Scroll-Based Orbiting Cart */}
+      {/* Floating WhatsApp Button with Scroll-Based Rotating Dashed Border */}
       <div className="whatsapp-float-container" data-testid="whatsapp-float-container">
         <div 
           ref={cartRef}
-          className="orbiting-cart"
+          className="rotating-dashed-border"
           style={{
-            transform: `rotate(${cartRotation}deg) translateX(42px) rotate(${-cartRotation}deg)`
+            transform: `rotate(${cartRotation}deg)`
           }}
-        >
-          <img src={cartImg} alt="Food Cart" />
-        </div>
+        />
         <button
           onClick={() => window.open('https://wa.me/6285691070999', '_blank')}
           className="whatsapp-button"

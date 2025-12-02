@@ -52,22 +52,22 @@
   opacity: 0;
 }
 
-/* WhatsApp Floating Button with Scroll-Based Orbiting Cart */
+/* WhatsApp Floating Button with Scroll-Based Rotating Dashed Border */
 .whatsapp-float-container {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
   z-index: 50;
-  width: 90px;
-  height: 90px;
+  width: 80px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .whatsapp-button {
-  width: 65px;
-  height: 65px;
+  width: 56px;
+  height: 56px;
   background-color: #25D366;
   border-radius: 50%;
   display: flex;
@@ -81,30 +81,26 @@
 }
 
 .whatsapp-button:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
 }
 
 .whatsapp-button svg {
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   color: white;
   fill: white;
 }
 
-.orbiting-cart {
+.rotating-dashed-border {
   position: absolute;
-  width: 28px;
-  height: 28px;
-  z-index: 3;
-  transition: transform 0.1s linear;
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  border: 2px dashed hsl(25 60% 45%);
+  z-index: 1;
+  transition: transform 0.05s linear;
   pointer-events: none;
-}
-
-.orbiting-cart img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
 }
 
 /* LIGHT MODE - Business Card Theme: Cream, Amber, Maroon */
