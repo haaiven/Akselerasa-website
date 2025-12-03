@@ -31,7 +31,7 @@ import { useState, useEffect, useRef } from "react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { ThemeToggle } from "@/components/theme-toggle";
 import logoImg from "@assets/file_00000000731c7207a92bed4299b440fb_1764680794736.png";
-import streetFoodImg from "@assets/IMG-20251125-WA0005_1764033940096.jpg";
+import heroImg from "@assets/premium_photo-1675731938670-20639b4a60ae_1764730076819.jpeg";
 import dashboardImg from "@assets/IMG-20251125-WA0001_1764033940133.jpg";
 import teamImg from "@assets/IMG-20251125-WA0003_1764033940115.jpg";
 import hollandLogo from "@assets/c0db033d-0dad-47b2-8a08-6d203356e20a_brand-logo_1589291484200_1764316807917.jpg";
@@ -170,7 +170,7 @@ export default function Home() {
         id="home" 
         className="relative h-screen flex items-center justify-center overflow-hidden"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${streetFoodImg})`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${heroImg})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
