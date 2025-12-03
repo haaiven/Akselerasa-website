@@ -343,11 +343,11 @@ export default function Home() {
                   />
                 </div>
                 <CardHeader>
-                  <CardTitle className="text-2xl">Holland Martabak Terang Bulan</CardTitle>
+                  <CardTitle className="text-2xl">Martabak Holland Terang Bulan</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground text-justify">
-                    A modern F&B concept that blends contemporary ambiance with authentic Indonesian flavors, offering signature sweet martabak, savory egg martabak, and various irresistible flavor selections.
+                    A true Surabaya legend since 1987, Martabak Holland Terang Bulan is renowned for its rich flavors and uncompromising quality. Crafted with premium ingredients and perfected over decades, their martabak has become a beloved local tradition—bringing indulgence and authenticity to every bite.
                   </p>
                 </CardContent>
               </Card>
