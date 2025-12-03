@@ -252,8 +252,8 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4" data-testid="text-services-title">
               What We Offer
             </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-justify">
-              Empowering Street Food & Small Businesses to Scale Smarter — We help street food entrepreneurs and small businesses grow through accessible operational technology, streamlined systems, and strategic expansion support — including opening new outlets in high-potential locations to boost revenue.
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Empowering Street Food & Small Businesses to Scale Smarter
             </p>
           </div>
 
