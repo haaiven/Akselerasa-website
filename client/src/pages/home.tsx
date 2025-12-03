@@ -220,13 +220,13 @@ export default function Home() {
               <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6" data-testid="text-about-title">
                 About AKSELERASA
               </h2>
-              <p className="text-lg text-muted-foreground mb-6" data-testid="text-about-p1">
+              <p className="text-lg text-muted-foreground mb-6 text-justify" data-testid="text-about-p1">
                 AKSELERASA is a digital systems and operational technology company dedicated to helping MSMEs — especially street food vendors and F&B outlets — grow more efficiently, modernize their operations, and expand sustainably.
               </p>
-              <p className="text-lg text-muted-foreground mb-6" data-testid="text-about-p2">
+              <p className="text-lg text-muted-foreground mb-6 text-justify" data-testid="text-about-p2">
                 Beyond technology, we support business owners in opening new outlets in strategic locations with high market potential. We optimize operations through automated transaction tracking, performance monitoring, and scalable franchise systems.
               </p>
-              <p className="text-lg text-muted-foreground" data-testid="text-about-p3">
+              <p className="text-lg text-muted-foreground text-justify" data-testid="text-about-p3">
                 By combining application technology, data-driven decision-making, and real on-ground operational experience, we help businesses grow faster, expand confidently, and maintain consistent quality across all locations.
               </p>
             </div>
@@ -252,7 +252,7 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4" data-testid="text-services-title">
               What We Offer
             </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-justify">
               Empowering Street Food & Small Businesses to Scale Smarter — We help street food entrepreneurs and small businesses grow through accessible operational technology, streamlined systems, and strategic expansion support — including opening new outlets in high-potential locations to boost revenue.
             </p>
           </div>
@@ -265,7 +265,7 @@ export default function Home() {
                 <CardDescription>Helping Small Food Businesses Grow and Expand Strategically</CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground text-justify">
                   We support street food entrepreneurs in expanding their outlets to strategic, high-potential locations. Our team equips business owners with easy-to-use tools, practical systems, and hands-on field mentoring — enabling them to modernize their operations without losing their unique local character and culinary identity.
                 </p>
               </CardContent>
@@ -278,10 +278,10 @@ export default function Home() {
                 <CardDescription>A Complete, Flexible, and Intuitive POS Solution</CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground mb-4">
+                <p className="text-muted-foreground mb-4 text-justify">
                   Our POS system is stable, easy to use, and works even without an internet connection. It adapts to your menu, pricing, and workflow, delivering fast transaction processing that keeps your business running smoothly.
                 </p>
-                <p className="text-muted-foreground mb-2">Each business owner gains access to a real-time dashboard featuring:</p>
+                <p className="text-muted-foreground mb-2 text-justify">Each business owner gains access to a real-time dashboard featuring:</p>
                 <ul className="text-muted-foreground list-disc list-inside space-y-1">
                   <li>Daily, monthly, and yearly sales</li>
                   <li>Comprehensive revenue reports</li>
@@ -298,7 +298,7 @@ export default function Home() {
                 <CardDescription>Standardized Operations for Seamless Replication</CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground text-justify">
                   We standardize SOPs, staff training, and supply routines to ensure every outlet maintains consistent quality from day one. With structured processes in place, operations become more efficient and easier to manage.
                 </p>
               </CardContent>
@@ -311,7 +311,7 @@ export default function Home() {
                 <CardDescription>Smarter Decision-Making Through Clear, Actionable Data</CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground mb-2">
+                <p className="text-muted-foreground mb-2 text-justify">
                   We turn daily transactions into visual dashboards and automated alerts that help owners monitor:
                 </p>
                 <ul className="text-muted-foreground list-disc list-inside space-y-1 mb-4">
@@ -320,7 +320,7 @@ export default function Home() {
                   <li>Performance trends</li>
                   <li>Growth charts</li>
                 </ul>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground text-justify">
                   With accurate data at your fingertips, you can make faster, more informed decisions.
                 </p>
               </CardContent>
@@ -346,7 +346,7 @@ export default function Home() {
                   <CardTitle className="text-2xl">Holland Martabak Terang Bulan</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground">
+                  <p className="text-muted-foreground text-justify">
                     A modern F&B concept that blends contemporary ambiance with authentic Indonesian flavors, offering signature sweet martabak, savory egg martabak, and various irresistible flavor selections.
                   </p>
                 </CardContent>
@@ -364,7 +364,7 @@ export default function Home() {
                   <CardTitle className="text-2xl">Pukis Kota Baru</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground">
+                  <p className="text-muted-foreground text-justify">
                     A beloved traditional Indonesian snack brand known for pioneering jumbo-sized pukis with a wide range of delicious flavors for every palate.
                   </p>
                 </CardContent>
@@ -430,18 +430,6 @@ export default function Home() {
                   className="rounded-md shadow-lg w-full"
                   data-testid="img-contact"
                 />
-              </div>
-
-              <div className="bg-background p-6 rounded-md">
-                <h3 className="text-xl font-semibold mb-4">Subscribe to Our Newsletter</h3>
-                <div className="flex gap-2">
-                  <Input 
-                    type="email" 
-                    placeholder="Enter your email" 
-                    data-testid="input-newsletter-email"
-                  />
-                  <Button data-testid="button-subscribe">Subscribe</Button>
-                </div>
               </div>
             </div>
 
