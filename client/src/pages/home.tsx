@@ -218,13 +218,16 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6" data-testid="text-about-title">
-                Company Overview
+                About AKSELERASA
               </h2>
               <p className="text-lg text-muted-foreground mb-6" data-testid="text-about-p1">
-                AKSELERASA is a digital system & operational technology company dedicated to helping businesses — especially street food and F&B outlets — optimize their operations through automated transaction tracking, performance monitoring, and scalable franchise development.
+                AKSELERASA is a digital systems and operational technology company dedicated to helping MSMEs — especially street food vendors and F&B outlets — grow more efficiently, modernize their operations, and expand sustainably.
               </p>
-              <p className="text-lg text-muted-foreground" data-testid="text-about-p2">
-                We combine application technology, data-driven decision making, and real operational field experience to help businesses grow faster, operate more efficiently, and replicate outlets without losing quality.
+              <p className="text-lg text-muted-foreground mb-6" data-testid="text-about-p2">
+                Beyond technology, we support business owners in opening new outlets in strategic locations with high market potential. We optimize operations through automated transaction tracking, performance monitoring, and scalable franchise systems.
+              </p>
+              <p className="text-lg text-muted-foreground" data-testid="text-about-p3">
+                By combining application technology, data-driven decision-making, and real on-ground operational experience, we help businesses grow faster, expand confidently, and maintain consistent quality across all locations.
               </p>
             </div>
             <div className="relative">
@@ -249,8 +252,8 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4" data-testid="text-services-title">
               What We Offer
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Empowering street food businesses with technology and systems
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Empowering Street Food & Small Businesses to Scale Smarter — We help street food entrepreneurs and small businesses grow through accessible operational technology, streamlined systems, and strategic expansion support — including opening new outlets in high-potential locations to boost revenue.
             </p>
           </div>
 
@@ -259,10 +262,11 @@ export default function Home() {
               <CardHeader>
                 <Shield className="w-12 h-12 text-primary mb-4" />
                 <CardTitle className="text-2xl">UMKM Empowerment</CardTitle>
+                <CardDescription>Helping Small Food Businesses Grow and Expand Strategically</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  We equip street food entrepreneurs with accessible tools and field mentoring so they can modernize without losing their local character.
+                  We support street food entrepreneurs in expanding their outlets to strategic, high-potential locations. Our team equips business owners with easy-to-use tools, practical systems, and hands-on field mentoring — enabling them to modernize their operations without losing their unique local character and culinary identity.
                 </p>
               </CardContent>
             </Card>
@@ -271,11 +275,19 @@ export default function Home() {
               <CardHeader>
                 <CreditCard className="w-12 h-12 text-primary mb-4" />
                 <CardTitle className="text-2xl">Personalized POS System</CardTitle>
+                <CardDescription>A Complete, Flexible, and Intuitive POS Solution</CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
-                  We deploy modular POS flows tailored to each menu, staffing model, and growth pace so transactions stay effortless.
+                <p className="text-muted-foreground mb-4">
+                  Our POS system is stable, easy to use, and works even without an internet connection. It adapts to your menu, pricing, and workflow, delivering fast transaction processing that keeps your business running smoothly.
                 </p>
+                <p className="text-muted-foreground mb-2">Each business owner gains access to a real-time dashboard featuring:</p>
+                <ul className="text-muted-foreground list-disc list-inside space-y-1">
+                  <li>Daily, monthly, and yearly sales</li>
+                  <li>Comprehensive revenue reports</li>
+                  <li>Performance insights for each outlet</li>
+                  <li>All in one place, accessible anytime, anywhere</li>
+                </ul>
               </CardContent>
             </Card>
 
@@ -283,10 +295,11 @@ export default function Home() {
               <CardHeader>
                 <FileText className="w-12 h-12 text-primary mb-4" />
                 <CardTitle className="text-2xl">Operational</CardTitle>
+                <CardDescription>Standardized Operations for Seamless Replication</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  We standardize SOPs, training, and supply routines, ensuring every outlet can replicate quality from day one.
+                  We standardize SOPs, staff training, and supply routines to ensure every outlet maintains consistent quality from day one. With structured processes in place, operations become more efficient and easier to manage.
                 </p>
               </CardContent>
             </Card>
@@ -295,10 +308,20 @@ export default function Home() {
               <CardHeader>
                 <TrendingUp className="w-12 h-12 text-primary mb-4" />
                 <CardTitle className="text-2xl">Data Driven</CardTitle>
+                <CardDescription>Smarter Decision-Making Through Clear, Actionable Data</CardDescription>
               </CardHeader>
               <CardContent>
+                <p className="text-muted-foreground mb-2">
+                  We turn daily transactions into visual dashboards and automated alerts that help owners monitor:
+                </p>
+                <ul className="text-muted-foreground list-disc list-inside space-y-1 mb-4">
+                  <li>Sales</li>
+                  <li>Expenses</li>
+                  <li>Performance trends</li>
+                  <li>Growth charts</li>
+                </ul>
                 <p className="text-muted-foreground">
-                  We transform daily transactions into dashboards and proactive alerts that guide smarter purchasing and expansion decisions.
+                  With accurate data at your fingertips, you can make faster, more informed decisions.
                 </p>
               </CardContent>
             </Card>
@@ -306,9 +329,10 @@ export default function Home() {
 
           {/* Trusted By Section */}
           <div className="mt-20">
-            <h3 className="text-2xl font-semibold text-center text-foreground mb-8" data-testid="text-our-clients">
+            <h3 className="text-2xl font-semibold text-center text-foreground mb-2" data-testid="text-our-clients">
               Our Clients
             </h3>
+            <p className="text-center text-muted-foreground mb-8">Trusted by Local Food Brands</p>
             <div className="grid md:grid-cols-2 gap-8">
               <Card className="hover-elevate overflow-hidden" data-testid="card-portfolio-holland">
                 <div className="aspect-video bg-white flex items-center justify-center p-8">
@@ -319,11 +343,11 @@ export default function Home() {
                   />
                 </div>
                 <CardHeader>
-                  <CardTitle className="text-2xl">Holland Mini Café</CardTitle>
+                  <CardTitle className="text-2xl">Holland Martabak Terang Bulan</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    A business concept that combines modern ambiance with authentic traditional Indonesian flavors. Featuring signature dishes like sweet martabak (terangbulan) and savory egg martabak, along with a variety of Indonesian coffee drinks, Holland Mini Café is the ultimate destination for food lovers seeking quality dishes in a comfortable atmosphere.
+                    A modern F&B concept that blends contemporary ambiance with authentic Indonesian flavors, offering signature sweet martabak, savory egg martabak, and various irresistible flavor selections.
                   </p>
                 </CardContent>
               </Card>
@@ -341,7 +365,7 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    A beloved traditional Indonesian snack, pioneering jumbo-sized pukis with a wide variety of delicious flavor options that delight every palate.
+                    A beloved traditional Indonesian snack brand known for pioneering jumbo-sized pukis with a wide range of delicious flavors for every palate.
                   </p>
                 </CardContent>
               </Card>
