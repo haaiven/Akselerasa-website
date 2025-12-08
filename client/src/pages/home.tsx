@@ -189,7 +189,7 @@ export default function Home() {
               onClick={() => scrollToSection('contact')}
               data-testid="button-join-now"
             >
-              Join Now
+              Start Your Journey Today
             </Button>
             <Button 
               size="lg" 
