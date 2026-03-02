@@ -333,8 +333,8 @@ export default function Home() {
               Our Clients
             </h3>
             <p className="text-center text-muted-foreground mb-8">Trusted by Local Food Brands</p>
-            <div className="grid md:grid-cols-2 gap-8 items-stretch">
-              <Card className="hover-elevate overflow-hidden flex flex-col" data-testid="card-portfolio-batagor-nyuss">
+            <div className="grid md:grid-cols-2 gap-8">
+              <Card className="hover-elevate overflow-hidden" data-testid="card-portfolio-batagor-nyuss">
                 <div className="aspect-video bg-white flex items-center justify-center p-8">
                   <img 
                     src={batagorNyussLogo} 
@@ -342,19 +342,17 @@ export default function Home() {
                     className="max-h-full max-w-full object-contain"
                   />
                 </div>
-                <div className="flex flex-col flex-1">
-                  <CardHeader>
-                    <CardTitle className="text-2xl">Batagor Nyuss</CardTitle>
-                  </CardHeader>
-                  <CardContent className="flex-1">
-                    <p className="text-muted-foreground text-justify">
-                      A favorite Indonesian street food brand serving savory batagor with authentic peanut sauce, built on a simple concept designed to grow and scale.
-                    </p>
-                  </CardContent>
-                </div>
+                <CardHeader>
+                  <CardTitle className="text-2xl">Batagor Nyuss</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground text-justify">
+                    A favorite Indonesian street food brand serving savory batagor with authentic peanut sauce, built on a simple concept designed to grow and scale.
+                  </p>
+                </CardContent>
               </Card>
 
-              <Card className="hover-elevate overflow-hidden flex flex-col" data-testid="card-portfolio-pukis">
+              <Card className="hover-elevate overflow-hidden" data-testid="card-portfolio-pukis">
                 <div className="aspect-video bg-[#F5A623] flex items-center justify-center p-8">
                   <img 
                     src={pukisLogo} 
@@ -362,16 +360,14 @@ export default function Home() {
                     className="max-h-full max-w-full object-contain"
                   />
                 </div>
-                <div className="flex flex-col flex-1">
-                  <CardHeader>
-                    <CardTitle className="text-2xl">Pukis Kota Baru</CardTitle>
-                  </CardHeader>
-                  <CardContent className="flex-1">
-                    <p className="text-muted-foreground text-justify">
-                      A beloved traditional Indonesian snack brand known for pioneering jumbo-sized pukis with a wide range of delicious flavors for every palate.
-                    </p>
-                  </CardContent>
-                </div>
+                <CardHeader>
+                  <CardTitle className="text-2xl">Pukis Kota Baru</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground text-justify">
+                    A beloved traditional Indonesian snack brand known for pioneering jumbo-sized pukis with a wide range of delicious flavors for every palate.
+                  </p>
+                </CardContent>
               </Card>
             </div>
           </div>
@@ -509,7 +505,7 @@ export default function Home() {
                 <span className="text-xl font-bold" style={{ fontFamily: "'Cinzel', serif" }}>AKSELERASA</span>
               </div>
               <p className="text-muted-foreground text-sm">
-                PT Kreasi Cerdas Digital
+                PT Inovasi Jaya Akselera
               </p>
               <p className="text-muted-foreground text-sm mt-2">
                 Leading the Future of Street Food with Smart Systems
@@ -553,7 +549,7 @@ export default function Home() {
 
           <div className="border-t border-border pt-8 text-center">
             <p className="text-muted-foreground text-sm">
-              © 2025 PT Kreasi Cerdas Digital. All Rights Reserved.
+              © 2025 PT Inovasi Jaya Akselera. All Rights Reserved.
             </p>
           </div>
         </div>
