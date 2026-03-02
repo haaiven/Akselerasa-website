@@ -505,7 +505,7 @@ export default function Home() {
                 <span className="text-xl font-bold" style={{ fontFamily: "'Cinzel', serif" }}>AKSELERASA</span>
               </div>
               <p className="text-muted-foreground text-sm">
-                PT Inovasi Jaya Akselera
+                PT Kreasi Cerdas Digital
               </p>
               <p className="text-muted-foreground text-sm mt-2">
                 Leading the Future of Street Food with Smart Systems
@@ -549,7 +549,7 @@ export default function Home() {
 
           <div className="border-t border-border pt-8 text-center">
             <p className="text-muted-foreground text-sm">
-              © 2025 PT Inovasi Jaya Akselera. All Rights Reserved.
+              © 2025 PT Kreasi Cerdas Digital. All Rights Reserved.
             </p>
           </div>
         </div>
