@@ -34,7 +34,7 @@ import logoImg from "@assets/file_00000000731c7207a92bed4299b440fb_1764680794736
 import heroImg from "@assets/premium_photo-1675731938670-20639b4a60ae_1764730076819.jpeg";
 import dashboardImg from "@assets/IMG-20251125-WA0001_1764033940133.jpg";
 import teamImg from "@assets/IMG-20251125-WA0003_1764033940115.jpg";
-import hollandLogo from "@assets/c0db033d-0dad-47b2-8a08-6d203356e20a_brand-logo_1589291484200_1764316807917.jpg";
+import batagorNyussLogo from "@assets/Image_1772425634428.png";
 import pukisLogo from "@assets/images_1764316799272.jpeg";
 import contactImg from "@assets/IMG-20251128-WA0005_1764559092155.jpg";
 
@@ -334,20 +334,20 @@ export default function Home() {
             </h3>
             <p className="text-center text-muted-foreground mb-8">Trusted by Local Food Brands</p>
             <div className="grid md:grid-cols-2 gap-8">
-              <Card className="hover-elevate overflow-hidden" data-testid="card-portfolio-holland">
+              <Card className="hover-elevate overflow-hidden" data-testid="card-portfolio-batagor-nyuss">
                 <div className="aspect-video bg-white flex items-center justify-center p-8">
                   <img 
-                    src={hollandLogo} 
-                    alt="Holland Mini Café Logo" 
+                    src={batagorNyussLogo} 
+                    alt="Batagor Nyuss Logo" 
                     className="max-h-full max-w-full object-contain"
                   />
                 </div>
                 <CardHeader>
-                  <CardTitle className="text-2xl">Martabak Holland Terang Bulan</CardTitle>
+                  <CardTitle className="text-2xl">Batagor Nyuss</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground text-justify">
-                    A true Surabaya legend since 1987, Martabak Holland Terang Bulan is renowned for its rich flavors and uncompromising quality. Crafted with premium ingredients and perfected over decades, their martabak has become a beloved local tradition—bringing indulgence and authenticity to every bite.
+                    A favorite Indonesian street food brand serving savory batagor with authentic peanut sauce, built on a simple concept designed to grow and scale.
                   </p>
                 </CardContent>
               </Card>
