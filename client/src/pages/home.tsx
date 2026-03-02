@@ -342,32 +342,36 @@ export default function Home() {
                     className="max-h-full max-w-full object-contain"
                   />
                 </div>
-                <CardHeader>
-                  <CardTitle className="text-2xl">Batagor Nyuss</CardTitle>
-                </CardHeader>
-                <CardContent className="flex-1 flex items-start">
-                  <p className="text-muted-foreground text-justify">
-                    A favorite Indonesian street food brand serving savory batagor with authentic peanut sauce, built on a simple concept designed to grow and scale.
-                  </p>
-                </CardContent>
+                <div className="flex flex-col flex-1">
+                  <CardHeader>
+                    <CardTitle className="text-2xl">Batagor Nyuss</CardTitle>
+                  </CardHeader>
+                  <CardContent className="flex-1">
+                    <p className="text-muted-foreground text-justify">
+                      A favorite Indonesian street food brand serving savory batagor with authentic peanut sauce, built on a simple concept designed to grow and scale.
+                    </p>
+                  </CardContent>
+                </div>
               </Card>
 
               <Card className="hover-elevate overflow-hidden flex flex-col" data-testid="card-portfolio-pukis">
-                <div className="aspect-video bg-white flex items-center justify-center p-8">
+                <div className="aspect-video bg-[#F5A623] flex items-center justify-center p-8">
                   <img 
                     src={pukisLogo} 
                     alt="Pukis Kota Baru Logo" 
                     className="max-h-full max-w-full object-contain"
                   />
                 </div>
-                <CardHeader>
-                  <CardTitle className="text-2xl">Pukis Kota Baru</CardTitle>
-                </CardHeader>
-                <CardContent className="flex-1 flex items-start">
-                  <p className="text-muted-foreground text-justify">
-                    A beloved traditional Indonesian snack brand known for pioneering jumbo-sized pukis with a wide range of delicious flavors for every palate.
-                  </p>
-                </CardContent>
+                <div className="flex flex-col flex-1">
+                  <CardHeader>
+                    <CardTitle className="text-2xl">Pukis Kota Baru</CardTitle>
+                  </CardHeader>
+                  <CardContent className="flex-1">
+                    <p className="text-muted-foreground text-justify">
+                      A beloved traditional Indonesian snack brand known for pioneering jumbo-sized pukis with a wide range of delicious flavors for every palate.
+                    </p>
+                  </CardContent>
+                </div>
               </Card>
             </div>
           </div>
